@@ -1,3 +1,10 @@
+# 1.0.0 (2022-03-03)
+
+
+### Features
+
+* commit inicial ([ed9811d](https://github.com/npkgdev/nestjs-scanloader/commit/ed9811de817b8def5391e6db6794d29ff715b6e7))
+
 ## [1.0.2](https://github.com/npkgdev/nestjs-scanloader/compare/v1.0.1...v1.0.2) (2022-03-03)
 
 
