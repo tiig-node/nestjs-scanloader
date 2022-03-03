@@ -1,6 +1,6 @@
 {
   "name": "@npkgdev/nestjs-scanloader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "nestjs scan & autoload modules",
   "author": "Douglas de Paula Natalli",
   "license": "MIT",

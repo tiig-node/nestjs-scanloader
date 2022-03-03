@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/npkgdev/nestjs-scanloader/compare/v1.0.0...v1.0.1) (2022-03-03)
+
+
+### Bug Fixes
+
+* corrige .npmrc ([ddf4939](https://github.com/npkgdev/nestjs-scanloader/commit/ddf493911a0abbee29e582443e0e4ee02b4ea79a))
+
 # 1.0.0 (2022-03-03)
 
 
