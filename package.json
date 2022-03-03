@@ -1,0 +1,87 @@
+{
+  "name": "@npkgdev/nestjs-scanloader",
+  "version": "1.0.2",
+  "description": "nestjs scan & autoload modules",
+  "author": "Douglas de Paula Natalli",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig.build.json",
+    "format": "prettier --write \"**/*.ts\"",
+    "lint": "eslint 'lib/**/*.ts' --fix",
+    "prepublish": "npm run build",
+    "test": "jest",
+    "prerelease": "npm run build",
+    "release": "npx semantic-release"
+  },
+  "keywords": [
+    "nestjs",
+    "scan",
+    "loader"
+  ],
+  "dependencies": {
+    "@nestjs/common": "^8.0.0",
+    "fast-glob": "^3.2.7",
+    "rxjs": "^7.3.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "16.0.2",
+    "@commitlint/config-angular": "16.0.0",
+    "@nestjs/core": "^8.0.0",
+    "@nestjs/platform-express": "^8.0.0",
+    "@nestjs/testing": "^8.0.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.2",
+    "@semantic-release/npm": "^9.0.0",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "@types/jest": "27.4.0",
+    "@types/node": "16.11.22",
+    "@typescript-eslint/eslint-plugin": "5.10.0",
+    "@typescript-eslint/parser": "5.10.0",
+    "eslint": "8.7.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.25.4",
+    "husky": "7.0.4",
+    "jest": "27.4.7",
+    "lint-staged": "12.2.0",
+    "prettier": "2.5.1",
+    "reflect-metadata": "0.1.13",
+    "rimraf": "3.0.2",
+    "semantic-release": "^19.0.2",
+    "ts-jest": "27.1.3",
+    "typescript": "4.5.5"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -c .commitlintrc.json -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npkgdev/nestjs-scanloader"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}
