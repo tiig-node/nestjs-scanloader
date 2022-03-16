@@ -24,8 +24,8 @@
     "rxjs": "^7.3.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "16.2.1",
-    "@commitlint/config-angular": "16.2.1",
+    "@commitlint/cli": "16.2.3",
+    "@commitlint/config-angular": "16.2.3",
     "@nestjs/core": "^8.0.0",
     "@nestjs/platform-express": "^8.0.0",
     "@nestjs/testing": "^8.0.0",
