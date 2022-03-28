@@ -5,15 +5,17 @@ import {
   // ModuleMetadata,
   Provider,
   Type,
-} from "@nestjs/common";
-import { sync } from "fast-glob";
-import { join, basename } from "path";
+} from '@nestjs/common';
+import { sync } from 'fast-glob';
+import { join } from 'path';
 
 export interface ScanOptions {
   name?: string;
   basePath: string;
   modulesPaths?: string[];
-  imports?: Array<Type<any> | DynamicModule | Promise<DynamicModule> | ForwardReference>;
+  imports?: Array<
+    Type<any> | DynamicModule | Promise<DynamicModule> | ForwardReference
+  >;
   ignores?: string[];
   providers?: Provider<any>[];
   export?: boolean;
@@ -40,6 +42,7 @@ const scanLoader = (
   pathsModules: string[],
   basePath: string,
   ignores: string[],
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   name: string,
 ): ILoaderResult => {
   const modules: any[] = [];
@@ -47,7 +50,7 @@ const scanLoader = (
     // logger.log("Scanning Modules...", name);
     const fileProviders: string[] = pathsModules
       .map((path) =>
-        sync(join(basePath, path).replace(/\\/g, "/"), {
+        sync(join(basePath, path).replace(/\\/g, '/'), {
           ignore: [...ignoredFiles, ...ignores],
           absolute: true,
         }),
@@ -57,6 +60,7 @@ const scanLoader = (
     for (const providersFile of fileProviders) {
       // logger.log("Scannng file " + basename(providersFile), name);
       // eslint-disable-next-line @typescript-eslint/no-require-imports
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
       const s = require(providersFile);
       const modulesRequire: any[] = Object.values(s);
       for (const module of modulesRequire) {
@@ -73,7 +77,7 @@ const scanLoader = (
 
 @Module({})
 export class ScanLoaderModule {
-  static forRoot (opts: ScanOptions): DynamicModule {
+  static forRoot(opts: ScanOptions): DynamicModule {
     const defProviders = opts.providers || [];
     const defImports = opts.imports || [];
     const defIgnores = opts.ignores || [];

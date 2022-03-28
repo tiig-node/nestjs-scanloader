@@ -4,4 +4,4 @@ import {
   // ScanModule,
 } from './scan-loader.module';
 
-export { ScanOptions, ScanLoaderModule } ; // , ScanModule };
+export { ScanOptions, ScanLoaderModule }; // , ScanModule };
