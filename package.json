@@ -20,7 +20,7 @@
     "release": "npx semantic-release"
   },
   "dependencies": {
-    "fast-glob": "^3.2.7"
+    "fast-glob": "3.2.12"
   },
   "devDependencies": {
     "@commitlint/cli": "17.1.2",
