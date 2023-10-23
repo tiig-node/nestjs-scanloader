@@ -1,10 +1,10 @@
 {
-  "name": "@npkgdev/nestjs-scanloader",
+  "name": "@tiig-node/nestjs-scanloader",
   "version": "1.0.1",
   "description": "nestjs scan & autoload modules",
   "author": "Douglas de Paula Natalli",
   "license": "MIT",
-  "url": "https://github.com/npkgdev/nestjs-scanloader#readme",
+  "url": "https://github.com/tiig-node/nestjs-scanloader#readme",
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.json",
     "format": "prettier --write \"lib/**/*.ts\"",
@@ -58,7 +58,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/npkgdev/nestjs-scanloader"
+    "url": "https://github.com/tiig-node/nestjs-scanloader"
   },
   "engine": {
     "node": ">=12"
