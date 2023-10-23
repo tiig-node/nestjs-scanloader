@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/tiig-node/nestjs-scanloader/compare/v1.0.1...v2.0.0) (2023-10-23)
+
+
+### chore
+
+* tiig-node ([7ae7e4e](https://github.com/tiig-node/nestjs-scanloader/commit/7ae7e4e95f75311b4b9d0c0d4ef54eb3f1e83e86))
+
+
+### BREAKING CHANGES
+
+* Alterado nome da organização npkgdev para tiig-node
+
 ## [1.0.1](https://github.com/tiig-node/nestjs-scanloader/compare/v1.0.0...v1.0.1) (2022-03-03)
 
 
